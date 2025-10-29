@@ -1,0 +1,44 @@
+div{
+    width: 350px;
+    height: 250px;
+    border: 2px solid ;
+}
+
+.sidea{
+    background-color: aqua;
+    backface-visibility: hidden;   /*back side ki visibility ko hta diya*/
+    z-index: 1;
+    text-align: center;
+}
+
+body{
+    perspective: 100px;
+}
+
+.sideb{
+    background-color: red;
+    transform: rotateY(180deg); /* pehle se rotate krdo ulta taaki jb hover krne pr rotate ho toh 180 ke baad seedha ho ajyee */
+}
+
+.wrapper{
+    position: relative;
+    width: 350px;
+    height: 250px;
+    transition: 2s;
+    transform-style: preserve-3d;    /* 3d preserve krlo*/
+    margin: 30px auto;
+}
+
+.sidea,  .sideb{
+    position: absolute;
+}
+
+.wrapper:hover{
+    transform: rotateY(180deg);
+}
+
+
+img{
+    width:100% ; 
+    height: 100%;
+}
